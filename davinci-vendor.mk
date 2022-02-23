@@ -32,6 +32,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/davinci/proprietary/vendor/etc/acdbdata/Forte/Forte_Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Forte/Forte_Headset_cal.acdb \
     vendor/xiaomi/davinci/proprietary/vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Forte/Forte_Speaker_cal.acdb \
     vendor/xiaomi/davinci/proprietary/vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/Forte/Forte_workspaceFile.qwsp \
+    vendor/xiaomi/davinci/proprietary/vendor/etc/acdbdata/adsp_avs_config.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/adsp_avs_config.acdb \
     vendor/xiaomi/davinci/proprietary/vendor/etc/camera/CFR_para_T.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/CFR_para_T.bin \
     vendor/xiaomi/davinci/proprietary/vendor/etc/camera/CFR_para_UW.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/CFR_para_UW.bin \
     vendor/xiaomi/davinci/proprietary/vendor/etc/camera/CFR_para_W.bin:$(TARGET_COPY_OUT_VENDOR)/etc/camera/CFR_para_W.bin \
@@ -67,6 +68,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/davinci/proprietary/vendor/etc/camera/watermark_font_2300_3199.dat:$(TARGET_COPY_OUT_VENDOR)/etc/camera/watermark_font_2300_3199.dat \
     vendor/xiaomi/davinci/proprietary/vendor/etc/hdr_config.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/hdr_config.cfg \
     vendor/xiaomi/davinci/proprietary/vendor/etc/init/init.mi_thermald.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mi_thermald.rc \
+    vendor/xiaomi/davinci/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
+    vendor/xiaomi/davinci/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
     vendor/xiaomi/davinci/proprietary/vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc \
     vendor/xiaomi/davinci/proprietary/vendor/etc/qdcm_calib_data_ss_ea_fhd_cmd_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_ss_ea_fhd_cmd_dsi_panel.xml \
     vendor/xiaomi/davinci/proprietary/vendor/etc/qdcm_calib_data_ss_eb_fhd_cmd_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_ss_eb_fhd_cmd_dsi_panel.xml \
@@ -108,6 +111,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/davinci/proprietary/vendor/etc/sensors/config/sns_tilt_sw_enabled.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_tilt_sw_enabled.json \
     vendor/xiaomi/davinci/proprietary/vendor/etc/sensors/config/sns_tilt_to_wake.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_tilt_to_wake.json \
     vendor/xiaomi/davinci/proprietary/vendor/etc/sensors/config/tcs3701.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/tcs3701.json \
+    vendor/xiaomi/davinci/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/xiaomi/davinci/proprietary/vendor/etc/sensors/sns_reg_config:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sns_reg_config \
     vendor/xiaomi/davinci/proprietary/vendor/etc/step_motor/mi_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/step_motor/mi_camera_config.xml \
     vendor/xiaomi/davinci/proprietary/vendor/etc/thermal-arvr.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-arvr.conf \
@@ -122,10 +126,21 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/davinci/proprietary/vendor/etc/thermal-youtube.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-youtube.conf \
     vendor/xiaomi/davinci/proprietary/vendor/etc/thermald-devices.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermald-devices.conf \
     vendor/xiaomi/davinci/proprietary/vendor/firmware/CAMERA_ICP.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/CAMERA_ICP.elf \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/a615_zap.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.b00 \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/a615_zap.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.b01 \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/a615_zap.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.b02 \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.elf \
     vendor/xiaomi/davinci/proprietary/vendor/firmware/a615_zap.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/a615_zap.mdt \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/a618_gmu.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/a618_gmu.bin \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/a630_sqe.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/a630_sqe.fw \
     vendor/xiaomi/davinci/proprietary/vendor/firmware/goodix_gt9886_limit_f10_first.tporder:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_gt9886_limit_f10_first.tporder \
     vendor/xiaomi/davinci/proprietary/vendor/firmware/goodix_gt9886_limit_f10_second.tporder:$(TARGET_COPY_OUT_VENDOR)/firmware/goodix_gt9886_limit_f10_second.tporder \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/ipa_fws.b00:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b00 \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/ipa_fws.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b01 \
     vendor/xiaomi/davinci/proprietary/vendor/firmware/ipa_fws.b02:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b02 \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/ipa_fws.b03:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b03 \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/ipa_fws.b04:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.b04 \
+    vendor/xiaomi/davinci/proprietary/vendor/firmware/ipa_fws.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.elf \
     vendor/xiaomi/davinci/proprietary/vendor/firmware/ipa_fws.mdt:$(TARGET_COPY_OUT_VENDOR)/firmware/ipa_fws.mdt \
     vendor/xiaomi/davinci/proprietary/vendor/firmware/tfa98xx.cnt:$(TARGET_COPY_OUT_VENDOR)/firmware/tfa98xx.cnt \
     vendor/xiaomi/davinci/proprietary/vendor/lib/libsn100u_fw.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsn100u_fw.so \
@@ -290,12 +305,15 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libnpu.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libnpu.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libremosaic_daemon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libremosaic_daemon.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libremosaiclib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libremosaiclib.so \
+    vendor/xiaomi/davinci/proprietary/vendor/lib64/libsensorcal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorcal.so \
+    vendor/xiaomi/davinci/proprietary/vendor/lib64/libsensorslog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsensorslog.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libsns_device_mode_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_device_mode_stub.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libsns_fastRPC_util.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_fastRPC_util.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libsns_low_lat_stream_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsns_low_lat_stream_stub.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libsnsapi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnsapi.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libsnsdiaglog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsnsdiaglog.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc.so \
+    vendor/xiaomi/davinci/proprietary/vendor/lib64/libssc_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssc_default_listener.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libswregistrationalgo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswregistrationalgo.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libswvdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libswvdec.so \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/libsysmon_cdsp_skel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsysmon_cdsp_skel.so \
