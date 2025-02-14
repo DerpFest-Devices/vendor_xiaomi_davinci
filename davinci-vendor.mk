@@ -166,7 +166,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/davinci/proprietary/vendor/lib64/camera/fdconfigvideolite.bin:$(TARGET_COPY_OUT_VENDOR)/lib64/camera/fdconfigvideolite.bin
 
 PRODUCT_PACKAGES += \
-    libsn100u_fw \
     com.qti.sensor.imx582_davinci \
     com.qti.sensor.imx586_davinci \
     com.qti.sensor.ov8856_davinci \
@@ -292,6 +291,7 @@ PRODUCT_PACKAGES += \
     libremosaiclib \
     libsensorcal \
     libsensorslog \
+    libsn100u_fw \
     libsns_device_mode_stub \
     libsns_fastRPC_util \
     libsns_low_lat_stream_stub \
